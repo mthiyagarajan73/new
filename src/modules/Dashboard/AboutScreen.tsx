@@ -2,13 +2,10 @@ import React, {useState} from 'react';
 import {
   Keyboard,
   StyleSheet,
-  Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import DeviceInfo from 'react-native-device-info';
-import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
 import {useNavigation} from '@react-navigation/native';
 import {AuthScreenNavigationProp} from '../navigation/types';
@@ -16,6 +13,7 @@ import SvgBack from '../../icons/SvgBack';
 import InputText from '../../packages/InputText/InputText';
 import Button from '../../packages/Button/Button';
 import AddPhotos from './AddPhotos';
+import Text from '../../packages/Text/Text';
 
 const styles = StyleSheet.create({
   overAll: {

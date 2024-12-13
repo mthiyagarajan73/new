@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, TouchableOpacity, StyleSheet, Modal, Text} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, Modal} from 'react-native';
 import SvgIdea from '../icons/SvgIdea';
+import Text from '../packages/Text/Text';
 
 const styles = StyleSheet.create({
   overlay: {
