@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 type Props = {
   title: string;
@@ -9,19 +9,21 @@ type Props = {
   backgroundColor: string;
 };
 const CustomButton = ({
-  title, onPress, backgroundColor, textColor, disabled
+  title,
+  onPress,
+  backgroundColor,
+  textColor,
+  disabled,
 }: Props) => {
-
   return (
     <TouchableOpacity
       style={[
         styles.button,
-        { backgroundColor: disabled ? '#d9d9d9' : backgroundColor },
+        {backgroundColor: disabled ? '#d9d9d9' : backgroundColor},
       ]}
       onPress={onPress}
-      disabled={disabled}
-    >
-      <Text style={[styles.buttonText, { color: disabled ? '#aaa' : textColor }]}>
+      disabled={disabled}>
+      <Text style={[styles.buttonText, {color: disabled ? '#aaa' : textColor}]}>
         {title}
       </Text>
     </TouchableOpacity>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    width:200 //need to change 
+    width: 200, //need to change
   },
   buttonText: {
     fontSize: 16,
@@ -53,4 +55,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-

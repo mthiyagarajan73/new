@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, StyleSheet, Modal, Text } from 'react-native';
-import Loader from '../packages/Loader';
+import {View, TouchableOpacity, StyleSheet, Modal, Text} from 'react-native';
 import SvgIdea from '../icons/SvgIdea';
 
 const styles = StyleSheet.create({
@@ -69,7 +68,6 @@ type Props = {
   handleNo: () => void;
   handleYes: () => void;
   title: string;
-  loader?: boolean;
   description?: string;
 };
 const AreYouSureModal = ({
@@ -77,31 +75,28 @@ const AreYouSureModal = ({
   handleNo,
   handleYes,
   title,
-  loader,
   description,
 }: Props) => {
-
-  return (<>
-{loader&&<Loader />}
-    <Modal
-      visible={open}
-    >
-      <View style={styles.overlay}>
-        <View style={styles.modalContainer}>
-          <View style={styles.iconContainer}>
-          <SvgIdea />
+  return (
+    <>
+      <Modal visible={open}>
+        <View style={styles.overlay}>
+          <View style={styles.modalContainer}>
+            <View style={styles.iconContainer}>
+              <SvgIdea />
+            </View>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.message}>{description}</Text>
+            <TouchableOpacity style={styles.button} onPress={handleYes}>
+              <Text style={styles.buttonText}>Yes</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.cancelButton} onPress={handleNo}>
+              <Text style={styles.cancelButtonText}>No</Text>
+            </TouchableOpacity>
           </View>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.message}>{description}</Text>
-          <TouchableOpacity disabled={loader} style={styles.button} onPress={handleYes}>
-            <Text style={styles.buttonText}>Yes</Text>
-          </TouchableOpacity>
-          <TouchableOpacity disabled={loader} style={styles.cancelButton} onPress={handleNo}>
-            <Text style={styles.cancelButtonText}>No</Text>
-          </TouchableOpacity>
         </View>
-      </View>
-    </Modal></>
+      </Modal>
+    </>
   );
 };
 

@@ -1,5 +1,11 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
@@ -40,10 +46,10 @@ const DigitalProducts = () => {
           style={styles.backButton}>
           <SvgBack />
         </TouchableOpacity>
-        <Text > Digital Products </Text>
+        <Text> Digital Products </Text>
       </View>
       <ScrollView>
-      <ProductsPhotos  />
+        <ProductsPhotos />
       </ScrollView>
     </View>
   );

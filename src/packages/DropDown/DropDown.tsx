@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import DropDownPicker, {ItemType} from 'react-native-dropdown-picker';
-import { Colors } from '../../common/Styles';
+import {Colors} from '../../common/Styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   labelStyle: {
     color: '#575757',
-    fontFamily:'lato-bold',
+    fontFamily: 'lato-bold',
   },
   selectedItemContainer: {
     backgroundColor: 'white',
@@ -50,19 +50,19 @@ const styles = StyleSheet.create({
   },
   selectedItemLabel: {
     color: Colors.PRIMARY_COLOR,
-    fontFamily:'lato-bold',
+    fontFamily: 'lato-bold',
   },
   selectedValue: {
     marginTop: 20,
     fontSize: 16,
-    fontFamily:'lato',
+    fontFamily: 'lato',
   },
   listLabel: {
     color: 'white',
-    fontFamily:'lato',
+    fontFamily: 'lato',
   },
   label: {
-    fontFamily:'lato',
+    fontFamily: 'lato',
     //color:'white',
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';

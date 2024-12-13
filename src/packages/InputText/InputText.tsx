@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet, TouchableOpacity, } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  TextInput,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import SvgBin from '../../icons/SvgBin';
-import { Colors } from '../../common/Styles';
+import {Colors} from '../../common/Styles';
 
 const styles = StyleSheet.create({
   inputContainer: {
-    flexDirection:'row',
+    flexDirection: 'row',
     backgroundColor: '#fff',
     marginBottom: 20,
     borderColor: Colors.GRAY_90,
@@ -23,7 +29,7 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 16,
   },
-  lengthTxt:{
+  lengthTxt: {
     fontSize: 16,
     // position:'absolute',
     // marginTop:-10,
@@ -41,26 +47,34 @@ type Props = {
   disabled?: boolean;
   placeholder?: string;
 };
-const InputText = ({placeholder,maxLength, icon, onChangeText,value,height,disabled}: Props) => {
+const InputText = ({
+  placeholder,
+  maxLength,
+  icon,
+  onChangeText,
+  value,
+  height,
+  disabled,
+}: Props) => {
   return (
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={[styles.input,{height:height}]} // Adjust padding if icon is present
-          placeholder={placeholder}
-          onChangeText={onChangeText}
-          placeholderTextColor="#aaa"
-          maxLength={maxLength}
-          textAlignVertical="top"
-          value={value}
-          editable={!disabled}
-        />{icon && (
-              <TouchableOpacity style={{paddingTop:8,paddingLeft:90}}>
-                  <SvgBin />
-                  </TouchableOpacity>)}
-                {maxLength && ( 
-          <Text style={styles.lengthTxt}>{maxLength}</Text>
-        )}
-          </View>
+    <View style={styles.inputContainer}>
+      <TextInput
+        style={[styles.input, {height: height}]} // Adjust padding if icon is present
+        placeholder={placeholder}
+        onChangeText={onChangeText}
+        placeholderTextColor="#aaa"
+        maxLength={maxLength}
+        textAlignVertical="top"
+        value={value}
+        editable={!disabled}
+      />
+      {icon && (
+        <TouchableOpacity style={{paddingTop: 8, paddingLeft: 90}}>
+          <SvgBin />
+        </TouchableOpacity>
+      )}
+      {maxLength && <Text style={styles.lengthTxt}>{maxLength}</Text>}
+    </View>
   );
 };
 

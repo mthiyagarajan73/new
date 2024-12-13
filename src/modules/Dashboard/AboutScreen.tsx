@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
+import {
+  Keyboard,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
@@ -50,49 +57,59 @@ const LoginScreen = () => {
 
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    <View style={styles.overAll}>
-      <View style={styles.title}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={styles.backButton}>
-          <SvgBack />
-        </TouchableOpacity>
-        <Text > About </Text>
-      </View>
-      <InputText placeholder='Name' height={40} value={isName} onChangeText={setName} />
-      <InputText
-        height={80}
-        value={isDescription}
-        onChangeText={setDescription}
-        placeholder='Description'
-      />
-      <View style={styles.coverPhotos}>
-        <View>
-          <Text style={styles.bold}>Cover</Text>
-          <Text style={styles.bold}>Photos</Text>
+      <View style={styles.overAll}>
+        <View style={styles.title}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            style={styles.backButton}>
+            <SvgBack />
+          </TouchableOpacity>
+          <Text> About </Text>
         </View>
-        <Text style={{paddingLeft: 64}}>(Upload upto 5 photos)</Text>
-      </View>
-      <View style={{flexDirection: 'row', marginVertical: 24}}>
-        <AddPhotos />
-        <AddPhotos />
-        <AddPhotos />
-        <AddPhotos />
-        <AddPhotos />
-      </View>
-      <View style={{marginVertical: 24}}>
-        <Text style={styles.bold}>Price</Text>
-        <InputText placeholder='$0.00' height={80} value={isPrice} onChangeText={setPrice} />
-      </View>
-      <View style={styles.nextButton}>
-        <Button
-          title={'Next'}
-          onPress={() => navigation.navigate('Additionaldetails')}
-          textColor={Colors.WHITE}
-          backgroundColor={Colors.PRIMARY_COLOR}
+        <InputText
+          placeholder="Name"
+          height={40}
+          value={isName}
+          onChangeText={setName}
         />
+        <InputText
+          height={80}
+          value={isDescription}
+          onChangeText={setDescription}
+          placeholder="Description"
+        />
+        <View style={styles.coverPhotos}>
+          <View>
+            <Text style={styles.bold}>Cover</Text>
+            <Text style={styles.bold}>Photos</Text>
+          </View>
+          <Text style={{paddingLeft: 64}}>(Upload upto 5 photos)</Text>
+        </View>
+        <View style={{flexDirection: 'row', marginVertical: 24}}>
+          <AddPhotos />
+          <AddPhotos />
+          <AddPhotos />
+          <AddPhotos />
+          <AddPhotos />
+        </View>
+        <View style={{marginVertical: 24}}>
+          <Text style={styles.bold}>Price</Text>
+          <InputText
+            placeholder="$0.00"
+            height={80}
+            value={isPrice}
+            onChangeText={setPrice}
+          />
+        </View>
+        <View style={styles.nextButton}>
+          <Button
+            title={'Next'}
+            onPress={() => navigation.navigate('Additionaldetails')}
+            textColor={Colors.WHITE}
+            backgroundColor={Colors.PRIMARY_COLOR}
+          />
+        </View>
       </View>
-    </View>
     </TouchableWithoutFeedback>
   );
 };

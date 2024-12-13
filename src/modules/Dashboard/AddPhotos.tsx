@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.GRAY_90,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal:8
+    marginHorizontal: 8,
   },
 });
 

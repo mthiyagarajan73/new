@@ -3,6 +3,7 @@ import { View, Animated, StyleSheet, InteractionManager } from 'react-native';
 
 const styles = StyleSheet.create({
   overlay: {
+    flex:1,
     zIndex: 1000,
     position: 'absolute',
     top: 0,
