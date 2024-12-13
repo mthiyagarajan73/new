@@ -1,0 +1,48 @@
+export const LOGIN = 'login/LOGIN';
+export const UPDATEFCMTOKEN = 'login/UPDATEFCMTOKEN';
+export const WRITE_MOBILE_LOG = 'login/WRITE_MOBILE_LOG';
+
+export const FORGET_PIN = 'forget/FORGET_PIN';
+
+export const PATIENT_LIST = 'patient/PATIENT_LIST';
+export const GET_MDICATION_LIST = 'patient/GET_MDICATION_LIST';
+export const INSERT_MEDICATION = 'patient/INSERT_MEDICATION';
+export const INSERT_HOMELY_MEDICATION = 'patient/INSERT_HOMELY_MEDICATION';
+
+export const GET_REASONS = 'patient/GET_REASONS';
+export const OFFLINE_INSERT_MEDICATION = 'patient/OFFLINE_INSERT_MEDICATION';
+export const WITNESS_LOGIN = 'patient/WITNESS_LOGIN';
+
+export const CHANGE_PIN = 'change/CHANGE_PIN';
+
+export const REPORT_PATIENT_LIST = 'report/REPORT_PATIENT_LIST';
+export const ALL_ROUND_API = 'report/ALL_ROUND_API';
+export const CURRENT_ROUND_API = 'report/CURRENT_ROUND_API';
+
+export const STOCK_AUDIT_GET = 'stock/STOCK_AUDIT_GET';
+export const STOCK_AUDIT_RUNNING_BALANCE = 'runningBalance/STOCK_AUDIT_GET';
+export const STOCK_AUDIT_UPDATE_QTY = 'updateAudit/STOCK_AUDIT_GET';
+export const RESIDENTS_GET = 'stock/RESIDENTS_GET';
+export const MOBILE_ALL_ROUND_REPORT = 'report/MOBILE_ALL_ROUND_REPORT';
+
+export const NURSINGHOMEPATIENTWITHBYID = 'report/NURSINGHOMEPATIENTWITHBYID';
+
+export const POST_CONTACT = 'contact/POST_CONTACT';
+export const ISSUE_LIST = 'contact/ISSUE_LIST';
+
+export const PATIENT_LIST_PENDING_CHECKIN =
+  'pending/PATIENT_LIST_PENDING_CHECKIN';
+export const MEDICATION_LIST_PENDING_CHECKIN =
+  'pending/MEDICATION_LIST_PENDING_CHECKIN';
+export const MEDICATION_STOCK_UPDATE = 'pending/MEDICATION_STOCK_UPDATE';
+export const MEDICATION_STOCK_REASON_UPDATE =
+  'pending/MEDICATION_STOCK_REASON_UPDATE';
+export const UPDATE_RECVD_QTY = 'pending/UPDATE_RECVD_QTY';
+
+export const PRN_OUTCOME_POST = 'prn/PRN_OUTCOME_POST';
+
+export const OFFLINE_HOMEREMEDIES_LIST = 'patient/OFFLINE_HOMEREMEDIES_LIST';
+
+export const NOTIFICATION_LOG = 'app/NOTIFICATION_LOG';
+
+export const NOTIFICATION_SOUND = 'dashboard/NOTIFICATION_SOUND';
