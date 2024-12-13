@@ -1,5 +1,5 @@
-import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, { useState } from 'react';
+import {Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
@@ -10,6 +10,7 @@ import InputText from '../../packages/InputText/InputText';
 import SvgBin from '../../icons/SvgBin';
 import Button from '../../packages/Button/Button';
 import DropDown from '../../packages/DropDown/DropDown';
+import AreYouSureModal from '../../common/AreYouSureModalnew';
 
 const styles = StyleSheet.create({
   overAll: {
@@ -40,8 +41,27 @@ const styles = StyleSheet.create({
 
 const LoginScreen = () => {
   const navigation = useNavigation<AuthScreenNavigationProp>();
+  const [isAttribute,setAttribute] = useState('');
+  const [isValue,setValue] = useState('');
+  const [isCategory,setCategory] = useState('');
+  const [openDropDown,setDropDown] = useState(false);
+  const [openModal,setModal] = useState(false);
+  const isCategorylist =[
+    { label: '1. Wedding', value: 0 },
+    { label: '2. Birthday', value: 1 },
+    { label: '3. Engagement', value: 2 },
+    { label: '4. Baby', value: 3 },
+    { label: '5. PreWeeding', value: 4 },
+  ]
 
   return (
+    <>
+    <AreYouSureModal 
+    open={openModal} 
+    handleNo={()=>setModal(false)} 
+    handleYes={()=>navigation.navigate('MainScreen') } 
+      title={'Are You Sure to Purchase'} />
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     <View style={styles.overAll}>
       <View style={styles.title}>
         <TouchableOpacity
@@ -72,32 +92,30 @@ const LoginScreen = () => {
       </View>
       <View style={{flexDirection:'row',marginVertical:10,}}>
         <View style={{width:'45%',marginRight:10}}>
-      <InputText height={40} value={''} onChangeText={() => ''} />
+      <InputText placeholder='Attribute' height={40} value={isAttribute} onChangeText={setAttribute} />
       </View>
       <View style={{width:'50%',marginLeft:10,}}>
-      <InputText icon height={40} value={''} onChangeText={() => ''} />
+      <InputText placeholder='Value' icon height={40} value={isValue} onChangeText={setValue} />
       </View>
       </View>
       <DropDown
        placeholder={'Category'} 
-       open={false} 
-       value={undefined} 
-       items={[]} 
-       setOpen={function (prop: any): void {
-        throw new Error('Function not implemented.');
-      } } 
-      setValue={function (prop: any): void {
-        throw new Error('Function not implemented.');
-      } } />
+       open={openDropDown} 
+       value={isCategory} 
+       items={isCategorylist} 
+       setOpen={setDropDown} 
+      setValue={setCategory } />
       <View style={styles.nextButton}>
         <Button
           title={'Next'}
-          onPress={() => navigation.navigate('Additionaldetails')}
+          onPress={() => setModal(true)}
           textColor={Colors.WHITE}
           backgroundColor={Colors.PRIMARY_COLOR}
         />
       </View>
     </View>
+    </TouchableWithoutFeedback>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
@@ -49,6 +49,7 @@ const LoginScreen = () => {
   const [isPrice, setPrice] = useState('');
 
   return (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     <View style={styles.overAll}>
       <View style={styles.title}>
         <TouchableOpacity
@@ -92,6 +93,7 @@ const LoginScreen = () => {
         />
       </View>
     </View>
+    </TouchableWithoutFeedback>
   );
 };
 

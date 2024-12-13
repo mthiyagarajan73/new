@@ -45,7 +45,7 @@ const InputText = ({placeholder,maxLength, icon, onChangeText,value,height,disab
   return (
       <View style={styles.inputContainer}>
         <TextInput
-          style={[styles.input,{height:height}, icon && { paddingLeft: 120 }]} // Adjust padding if icon is present
+          style={[styles.input,{height:height}]} // Adjust padding if icon is present
           placeholder={placeholder}
           onChangeText={onChangeText}
           placeholderTextColor="#aaa"
@@ -54,7 +54,7 @@ const InputText = ({placeholder,maxLength, icon, onChangeText,value,height,disab
           value={value}
           editable={!disabled}
         />{icon && (
-              <TouchableOpacity style={{paddingTop:8}}>
+              <TouchableOpacity style={{paddingTop:8,paddingLeft:90}}>
                   <SvgBin />
                   </TouchableOpacity>)}
                 {maxLength && ( 

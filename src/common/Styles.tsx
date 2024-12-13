@@ -52,7 +52,7 @@ export const Colors ={
     LABEL_YELLOW_TINT_2 : "#F9F2CC",
     PRIMARY_TINT_1_COLOR : '#2BAED5',
     PRIMARY_TINT_3_COLOR : '#B5DBFF',
-    PRIMARY_COLOR : '#5168FF',
+    PRIMARY_COLOR : '#007bff',
     PRIMARY_DARK_COLOR : '#5173fe', 
 };
 
