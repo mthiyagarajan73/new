@@ -2,19 +2,16 @@ import React, {useState} from 'react';
 import {
   Keyboard,
   StyleSheet,
-  Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import DeviceInfo from 'react-native-device-info';
-import {responsiveHeight} from '../../../utils/helpers';
 import {Colors} from '../../common/Styles';
 import {useNavigation} from '@react-navigation/native';
 import {AuthScreenNavigationProp} from '../navigation/types';
 import SvgBack from '../../icons/SvgBack';
 import InputText from '../../packages/InputText/InputText';
-import SvgBin from '../../icons/SvgBin';
+import Text from '../../packages/Text/Text';
 import Button from '../../packages/Button/Button';
 import DropDown from '../../packages/DropDown/DropDown';
 import AreYouSureModal from '../../common/AreYouSureModalnew';

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {
   View,
   TextInput,
-  Text,
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
@@ -73,7 +72,6 @@ const InputText = ({
           <SvgBin />
         </TouchableOpacity>
       )}
-      {maxLength && <Text style={styles.lengthTxt}>{maxLength}</Text>}
     </View>
   );
 };

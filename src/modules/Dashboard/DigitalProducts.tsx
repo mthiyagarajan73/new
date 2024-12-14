@@ -2,12 +2,10 @@ import React from 'react';
 import {
   ScrollView,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import DeviceInfo from 'react-native-device-info';
-import {responsiveHeight} from '../../../utils/helpers';
+import Text from '../../packages/Text/Text';
 import {Colors} from '../../common/Styles';
 import SvgBack from '../../icons/SvgBack';
 import {useNavigation} from '@react-navigation/native';

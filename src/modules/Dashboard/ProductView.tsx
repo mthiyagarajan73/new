@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {Image, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import DeviceInfo from 'react-native-device-info';
-import {responsiveHeight} from '../../../utils/helpers';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import Text from '../../packages/Text/Text';
 import {Colors} from '../../common/Styles';
 import {useNavigation} from '@react-navigation/native';
 import {AuthScreenNavigationProp} from '../navigation/types';

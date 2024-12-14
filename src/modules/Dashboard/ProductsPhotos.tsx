@@ -1,8 +1,9 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {StyleSheet, View, Image, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import {AuthScreenNavigationProp} from '../navigation/types';
 import AreYouSureModal from '../../common/AreYouSureModalnew';
+import Text from '../../packages/Text/Text';
 
 const styles = StyleSheet.create({
   container: {
